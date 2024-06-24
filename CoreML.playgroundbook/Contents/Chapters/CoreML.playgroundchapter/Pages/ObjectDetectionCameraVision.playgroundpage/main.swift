@@ -17,8 +17,8 @@ model.featureProvider = try MLDictionaryFeatureProvider(dictionary: [
 ])
 
 //設定模型文字顏色
-let bboxColor =  colorLiteral(red: 0.46274495124816895, green: 0.7333332896232605, blue: 0.2509804368019104, alpha: 1.0)
-let textColor =  colorLiteral(red: -1.3499370652425569e-06, green: 0.3803921639919281, blue: 0.9960785508155823, alpha: 1.0)
+let bboxColor =  #colorLiteral(red: 0.46274495124816895, green: 0.7333332896232605, blue: 0.2509804368019104, alpha: 1.0)
+let textColor =  #colorLiteral(red: -1.3499370652425569e-06, green: 0.3803921639919281, blue: 0.9960785508155823, alpha: 1.0)
 
 
 
@@ -99,7 +99,7 @@ final class ViewController: PreviewViewController {
 
                 // Render a bounding box
                 let shapeLayer = CALayer()
-                shapeLayer.borderColor = #colorLiteral(red: 1.0, green: 0.0, blue: 0.0, alpha: 1.0)
+                shapeLayer.borderColor = bboxColor.cgColor
                 shapeLayer.borderWidth = 2
                 shapeLayer.bounds = bbox
                 shapeLayer.position = CGPoint(x: bbox.midX, y: bbox.midY)
@@ -110,7 +110,7 @@ final class ViewController: PreviewViewController {
                 textLayer.font = UIFont.preferredFont(forTextStyle: .body)
                 textLayer.bounds = CGRect(x: 0, y: 0, width: bbox.width - 10, height: bbox.height - 10)
                 textLayer.position = CGPoint(x: bbox.midX, y: bbox.midY)
-                textLayer.foregroundColor = #colorLiteral(red: 1.0, green: 0.0, blue: 0.0, alpha: 1.0)
+                textLayer.foregroundColor = textColor.cgColor
                 textLayer.contentsScale = 2.0 // Retina Display
                 textLayer.setAffineTransform(CGAffineTransform(scaleX: 1, y: -1))
 
