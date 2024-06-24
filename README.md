@@ -1,5 +1,3 @@
-## This repository is no longer maintained, but I'm currently developing [the new alternative](https://github.com/kkk669/CoreMLDemos.swiftpm).
-
 ![banner](images/banner.png)
 
 # coreml-playground
