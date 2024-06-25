@@ -7,7 +7,7 @@ import Vision
 let config = MLModelConfiguration()
 config.allowLowPrecisionAccumulationOnGPU = true
 config.computeUnits = .all
-let model = try compileModel(at:  fileLiteral(resourceName: "YOLOv3TinyInt8LUT.mlmodel"), configuration: config)
+let model = try compileModel(at:  #fileLiteral(resourceName: "YOLOv3TinyInt8LUT.mlmodel"), configuration: config)
 
 //設定模型的特徵
 model.featureProvider = try MLDictionaryFeatureProvider(dictionary: [
